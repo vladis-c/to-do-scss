@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+$primaryColor: aquamarine;
+$btnColor: rgb(64, 114, 97);
+$textColor: rgb(73, 73, 73);
+$bacgroundColor: rgb(54, 54, 54);
+$secondaryColor: rgb(255, 255, 238);
+
+::-webkit-scrollbar {
+  width: 25px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px $secondaryColor;
+  border: 0.5em solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  border: 0.5em solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-clip: padding-box;
+  background-color: $primaryColor;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: $btnColor;
+}
+
+body {
+  color: rgb(255, 191, 210);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.section {
+  min-height: 500px;
+  width: 500px;
+  background-color: $textColor;
+  border: $textColor solid 1, 5px;
+  color: $secondaryColor;
+  padding: 5px;
+  box-shadow: 10px 5px 5px $primaryColor;
+  &__h1 {
+    margin-left: 5px
+  };
+  &__enter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    &__enter {
+      width: 500px;
+      background-color: $secondaryColor;
+      color: $textColor;
+      border-radius: 4px;
+      border-style: none;
+      box-sizing: border-box;
+      padding-left: 12px;
+    }
+    &__enter-btn {
+      background-color: $btnColor;
+      color: $secondaryColor;
+      border-radius: 4px;
+      border-style: none;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+      padding: 10px 16px;
+      position: relative;
+      text-align: center;
+      transition: 150ms;
+      margin-left: 5px;
+    }
+    &__enter-btn:hover {
+      background-color: $secondaryColor;
+      color: $textColor;
+    }
+  }
+  &__tasks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    &__list {
+      list-style-type: none;
+      padding: 0;
+      overflow-y: scroll;
+      height: 290px;
+      &__list-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 5px;
+
+        &__text {
+          width: 500px;
+          background-color: $secondaryColor;
+          color: $textColor;
+          border-radius: 4px;
+          border-style: none;
+          box-sizing: border-box;
+          padding-left: 12px;
+          cursor: auto;
+        }
+        &__text_checked {
+          padding-left: 15px;
+          text-decoration: line-through;
+          font-style: italic;
+          background-color: $primaryColor;
+        }
+
+        &__btn {
+          background-color: $btnColor;
+          color: $secondaryColor;
+          border-radius: 4px;
+          border-style: none;
+          box-sizing: border-box;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 400;
+          margin: 0;
+          padding: 10px 16px;
+          position: relative;
+          text-align: center;
+          transition: 150ms;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        &__btn:hover {
+          background-color: $secondaryColor;
+          color: $textColor;
+        }
+      }
+    }
+  }
+  &__button-container {
+    display: flex;
+    justify-content: flex-end;
+    &__remove-all-btn {
+      background-color: $btnColor;
+      color: $secondaryColor;
+      border-radius: 4px;
+      border-style: none;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 0;
+      padding: 10px 16px;
+      position: relative;
+      text-align: center;
+      transition: 150ms;
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 500px;
+    }
+    &__remove-all-btn:hover {
+      background-color: $secondaryColor;
+      color: $textColor;
+    }
+  }
+}
