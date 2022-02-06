@@ -8,4 +8,4 @@ By default, the list is empty. There's a input that when user type in and click 
 
 ## Screenshot
 
-![todo list](assets/todo.PNG)
+![todo list](assets/to-do.PNG)
